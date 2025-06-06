@@ -1,0 +1,205 @@
+<!DOCTYPE html><html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>resume</title>
+  <link rel="icon" type="image/png" href="assets/images/iconweb.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="assets/style.css">
+
+</head>
+
+<body> 
+
+ <!-- LOGIN --> 
+  
+ <div id="loginContainer" class="login-screen">
+  <div class="login-content">
+    <img src="assets/images/profile.png" class="login-icon" alt="User Icon" />
+    <div class="login-username">Farah</div>
+    <div class="login-password-container">
+      <div class="password-wrapper">
+      <input type="text" placeholder="enter password" />
+      <button class="login-arrow" title="log in">
+        <img src="assets/images/enter.png" alt="Login Arrow" />
+      </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="desktopContainer">
+
+<!-- TASKBAR -->  
+
+<div id="taskbar" class="taskbar">
+
+<!-- TASKBAR LEFT -->
+
+  <div class="taskbar-left">
+    <button onclick="toggleStartMenu()" class="icon-button">
+      <img src="assets/images/icon.png" alt="Start Icon">
+    </button>
+  </div>
+
+<!-- TASKBAR RIGHT -->
+
+  <div class="taskbar-right">
+     <button id="taskbar-music-btn" style="display: none;" onclick="toggleMusic()">
+      <img id="music-icon" src="assets/images/start.png" alt="Play Music" />
+    </button>
+    <div id="datetime">Loading...</div>
+  </div> 
+
+</div>
+
+  <!-- DEKSTOP ICON COLUMN 1 -->  
+   
+<div class="desktop-icon" style="top: 60px; left: 30px;" onclick="openWindow('projectsWindow')">
+  <img src="assets/images/project.png" alt="Projects">
+    <div>Projects</div>
+</div>
+
+<div class="desktop-icon" style="top: 200px; left: 30px;" onclick="openWindow('educationWindow')">
+  <img src="assets/images/education.png" alt="Education">
+    <div>Education</div>
+</div>
+
+<div class="desktop-icon" style="top: 340px; left: 30px;" onclick="openWindow('skillsWindow')">
+  <img src="assets/images/skills.png" alt="Skills">
+    <div>Skills</div>
+</div>
+
+  <!-- DEKSTOP ICON COLUMN 2 -->
+
+<a href="https://github.com/farahnzana" target="_blank" class="desktop-icon" style="top: 50px; left: 160px;">
+  <img src="assets/images/github.png" alt="GitHub">
+    <div>GitHub</div>
+</a>
+
+<a href="mailto:farahnfarzana@gmail.com" class="desktop-icon" style="top: 205px; left: 160px;">
+  <img src="assets/images/email.png" alt="Email">
+    <div>Email</div>
+</a>
+
+<div class="desktop-icon" style="top: 340px; left: 160px;" onclick="openWindow('resumeWindow')">
+  <img src="assets/images/resume.png" alt="Resume">
+    <div>About me</div>
+</div>  
+ 
+</div>
+  
+  <!-- WINDOWS -->  
+  
+  <div class="window" id="projectsWindow">
+  <div class="window-header">
+    <span>Projects</span>
+    <button class="close-btn" onclick="closeWindow('projectsWindow')">
+      <img src="assets/images/close.png" alt="Close" ></button>
+  </div>
+  <div class="window-body">
+    <!-- Your content goes here -->
+     <h4>Project Name</h4>
+    <p>Here are my creative projects!</p>
+    <img src="assets/images/resume.png">
+  </div>
+</div>  
+  
+ <div class="window" id="educationWindow">
+    <div class="window-header">
+      <span>Education</span>
+       <button class="close-btn" onclick="closeWindow('educationWindow')">
+      <img src="assets/images/close.png" alt="Close" ></button>
+    </div>
+    <div class="window-body">
+     <table border="1">
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Institution</th>
+      <th>Program</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2018–2023</td>
+      <td>SMK Raja Perempuan</td>
+      <td>SPM</td>
+    </tr>
+    <tr>
+      <td>2024-2028</td>
+      <td>Universiti Teknologi PETRONAS</td>
+      <td>Bachelor of IT (Hons)</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+</div>
+
+ <div class="window" id="skillsWindow">
+    <div class="window-header">
+      <span>Skills</span>
+       <button class="close-btn" onclick="closeWindow('skillsWindow')">
+      <img src="assets/images/close.png" alt="Close" ></button>
+    </div>
+    <div class="window-body">
+      <h4>My Skills</h4>
+      <ul>
+        <li>editing with Alight Motion</li>
+        <li>coding with html, javascript and css</li>
+      </ul>
+    </div>
+</div>
+
+  </div>  <div class="window" id="resumeWindow">
+    <div class="window-header">
+      <span>About me</span>
+       <button class="close-btn" onclick="closeWindow('resumeWindow')">
+      <img src="assets/images/close.png" alt="Close" ></button>
+    </div>
+    <div class="window-body">
+      <p>about me</p>
+      <img src="assets/images/resume.png"> <br>
+      <a href="resume.pdf" download>Download my Resume (PDF)</a>
+    </div>
+  </div>  
+    
+  <!-- START -->  
+   
+ <div class="start-menu" id="startMenu">
+  <div class="start-menu-item" onclick="sleep('sleep')">
+    <img src="assets/images/sleepp.png" alt="Sleep icon" class="start-icon">
+    <span>Sleep</span>
+  </div>
+  <div class="start-menu-item" onclick="shutdown('shutdown')">
+    <img src="assets/images/shutdownn.png" alt="Shutdown icon" class="start-icon">
+    <span>Shut Down</span>
+  </div>
+</div>
+ 
+<footer> 
+
+  <!-- SHUTDOWN -->  
+   
+  <div class="shutdown-screen hidden" id="shutdownScreen">
+    <img id="shutdownBunny" src="assets/images/bunny3.png" alt="Bunny">
+   <div id="shutdownText">powering down...</div>
+  </div> 
+
+   <!-- SLEEP -->  
+   
+  <div class="sleep-screen hidden" id="sleepScreen">
+    <img id="sleepBunny" src="assets/images/bunny1.png" alt="Bunny">
+   <div id="sleepText">sleeping...</div>
+  </div> 
+
+</footer>
+
+<!-- JS -->
+
+  <script src = "assets/script.js"></script>
+
+  </body>
+</html>
